@@ -1,0 +1,103 @@
+/* ===== GERAL ===== */
+body {
+    background-color: #0f0f0f;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 240px;
+    background-color: #0f0f0f;
+    color: #fff;
+    border-right: 1px solid #222;
+    flex-shrink: 0;
+}
+
+.sidebar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 12px 16px;
+    transition: background-color 0.2s;
+    border-radius: 8px;
+}
+
+.sidebar li a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+}
+
+.sidebar li:hover {
+    background-color: #272727;
+}
+
+.sidebar .active {
+    background-color: #373737;
+}
+
+.sidebar hr {
+    border: none;
+    border-top: 1px solid #333;
+    margin: 12px 0;
+}
+
+/* ===== BOTÃO ===== */
+.clear-history-btn {
+    border: 1px solid #555;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.clear-history-btn:hover {
+    background-color: #2a2a2a;
+    border-color: #888;
+}
+
+/* ===== LISTA DE HISTÓRICO ===== */
+.list-group-item {
+    background-color: #1f1f1f;
+    border-color: #333;
+    color: #fff;
+    transition: background-color 0.2s;
+}
+
+.list-group-item:hover {
+    background-color: #2a2a2a;
+}
+
+.list-group img {
+    width: 120px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .list-group-item .d-flex {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .list-group img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+}
